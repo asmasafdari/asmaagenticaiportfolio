@@ -1,0 +1,427 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Asma Amir Safdari</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: left-aligned editorial page. Hero pairs the headline with an agent "run log" built from real resume facts; below it a dated experience ledger, work cards, stack groups and contact. */
+:root {
+  --bg: #f2f6f7;
+  --surface: #ffffff;
+  --ink: #0e2530;
+  --muted: #4b6370;
+  --line: #d2dfe3;
+  --accent: #17718a;
+  --accent-soft: #e0eef2;
+  --on-accent: #ffffff;
+  --signal: #b9700c;
+  --log-bg: #0e2530;
+  --log-fg: #dbe9ee;
+  --log-dim: #8aa7b3;
+  --log-accent: #6fd0e4;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a1a22; --surface: #102530; --ink: #e6f0f3; --muted: #9bb3be; --line: #223b47;
+    --accent: #5fc3d8; --accent-soft: #12323d; --on-accent: #06222b; --signal: #e8a33d;
+    --log-bg: #06121a; --log-fg: #dbe9ee; --log-dim: #7f9ca8; --log-accent: #6fd0e4;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a1a22; --surface: #102530; --ink: #e6f0f3; --muted: #9bb3be; --line: #223b47;
+  --accent: #5fc3d8; --accent-soft: #12323d; --on-accent: #06222b; --signal: #e8a33d;
+  --log-bg: #06121a; --log-fg: #dbe9ee; --log-dim: #7f9ca8; --log-accent: #6fd0e4;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+}
+h1, h2, h3, p, ul, dl, dd { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(64px, 9vw, 108px);
+  padding-block: 20px 56px;
+}
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.section-head { display: flex; flex-direction: column; gap: 10px; }
+section { display: flex; flex-direction: column; gap: 32px; scroll-margin-top: 16px; }
+
+/* top bar */
+.bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 8px; }
+.mark { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; }
+.bar nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
+.bar nav a { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); text-decoration: none; padding-block: 4px; }
+.bar nav a:hover { color: var(--accent); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 48px; align-items: start; padding-top: clamp(16px, 4vw, 48px); }
+.hero-copy { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6.4vw, 4.5rem);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+h1 em { font-style: normal; color: var(--accent); }
+.lede { font-size: 1.12rem; max-width: 52ch; color: var(--muted); }
+.lede strong { color: var(--ink); font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 600 0.95rem var(--font-body);
+  padding: 12px 20px; border-radius: 8px; text-decoration: none; cursor: pointer;
+  border: 1.5px solid var(--accent);
+}
+.btn-primary { background: var(--accent); color: var(--on-accent); }
+.btn-ghost { background: transparent; color: var(--accent); }
+.btn:hover { filter: brightness(1.08); }
+
+.log { background: var(--log-bg); color: var(--log-fg); border-radius: 10px; overflow: hidden; min-width: 0; font-family: var(--font-mono); font-size: 0.84rem; line-height: 1.55; }
+.log-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 18px; border-bottom: 1px solid color-mix(in srgb, var(--log-dim) 35%, transparent); color: var(--log-dim); }
+.status { display: inline-flex; align-items: center; gap: 8px; color: var(--log-fg); }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--signal); box-shadow: 0 0 0 3px color-mix(in srgb, var(--signal) 28%, transparent); }
+.log dl { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 14px 14px; padding: 18px; }
+.log dt { color: var(--log-dim); }
+.log dd { color: var(--log-fg); overflow-wrap: anywhere; }
+.log dd b { color: var(--log-accent); font-weight: 500; }
+.cursor { display: inline-block; width: 0.55em; height: 1.05em; background: var(--log-accent); vertical-align: text-bottom; animation: blink 1.1s steps(2, start) infinite; }
+@keyframes blink { to { visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
+
+/* about */
+.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 40px; }
+.about-body { display: flex; flex-direction: column; gap: 18px; max-width: 64ch; min-width: 0; }
+.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; padding-top: 8px; }
+.facts div { display: flex; flex-direction: column; gap: 2px; border-top: 1px solid var(--line); padding-top: 10px; }
+.facts dt { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.facts dd { font-weight: 500; }
+
+/* experience ledger */
+.ledger { display: flex; flex-direction: column; }
+.row { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 12px 32px; padding-block: 26px; border-top: 1px solid var(--line); }
+.row:last-child { border-bottom: 1px solid var(--line); }
+.when { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.when b { display: block; color: var(--ink); font-weight: 500; }
+.row h3 { font-family: var(--font-display); font-size: 1.28rem; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+.row .where { color: var(--muted); font-size: 0.95rem; }
+.row-body { display: flex; flex-direction: column; gap: 10px; min-width: 0; max-width: 66ch; }
+.row ul { display: flex; flex-direction: column; gap: 6px; }
+.row li { padding-left: 18px; position: relative; }
+.row li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 8px; height: 2px; background: var(--accent); }
+
+/* work */
+.work { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 26px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.card h3 { font-family: var(--font-display); font-size: 1.25rem; line-height: 1.2; letter-spacing: -0.01em; }
+.card p { color: var(--muted); }
+.card .tags { font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent); margin-top: auto; padding-top: 6px; }
+.more { color: var(--muted); }
+
+/* stack */
+.stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+.group { display: flex; flex-direction: column; gap: 12px; border-top: 2px solid var(--ink); padding-top: 14px; min-width: 0; }
+.group h3 { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li { font-size: 0.92rem; font-weight: 500; background: var(--accent-soft); color: var(--ink); padding: 5px 12px; border-radius: 6px; }
+
+/* credentials */
+.creds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.cred { padding-block: 16px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.cred b { font-weight: 600; }
+.cred span { color: var(--muted); font-size: 0.93rem; }
+
+/* contact */
+.contact { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: clamp(24px, 5vw, 48px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 48px; }
+.contact-copy { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.contact-copy p { color: var(--muted); max-width: 44ch; }
+.reach { display: flex; flex-direction: column; min-width: 0; }
+.reach-row { display: grid; grid-template-columns: 70px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding-block: 14px; border-top: 1px solid var(--line); }
+.reach-row:last-child { border-bottom: 1px solid var(--line); }
+.reach-row .k { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.reach-row .v { overflow-wrap: anywhere; user-select: all; font-weight: 500; }
+.copy { font: 500 0.8rem var(--font-mono); background: transparent; color: var(--accent); border: 1px solid var(--line); border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+.copy:hover { border-color: var(--accent); }
+
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; color: var(--muted); font-size: 0.88rem; border-top: 1px solid var(--line); padding-top: 20px; }
+
+@media (max-width: 860px) {
+  .hero, .about, .contact { grid-template-columns: minmax(0, 1fr); }
+  .hero { gap: 36px; }
+  .row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .work, .stack, .creds { grid-template-columns: minmax(0, 1fr); }
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .reach-row { grid-template-columns: minmax(0, 1fr) auto; }
+  .reach-row .k { grid-column: 1 / -1; }
+  .log dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .log dd { margin-bottom: 12px; }
+}
+</style>
+
+<div class="page">
+  <header class="bar">
+    <a class="mark" href="#top">Asma Amir Safdari</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top" style="display:contents">
+    <div class="hero">
+      <div class="hero-copy">
+        <p class="label">Agentic AI Engineer &middot; Karachi, Pakistan</p>
+        <h1>I build AI agents that <em>move business numbers.</em></h1>
+        <p class="lede">I'm Asma. I write <strong>Python, FastAPI and TypeScript</strong>, I'm finishing a diploma in Agentic AI Engineering, and I've run marketing and web projects for paying clients since 2019. I build AI systems with the business result in mind from the first line.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-ghost" href="#experience">See experience</a>
+        </div>
+      </div>
+
+      <aside class="log" aria-label="Summary of skills and results">
+        <div class="log-head"><span>agent.run / asma</span><span class="status">open to roles</span></div>
+        <dl>
+          <dt>goal</dt>
+          <dd>Turn AI into growth a client can measure</dd>
+          <dt>tools</dt>
+          <dd>Python, FastAPI, SQLModel, PostgreSQL, TypeScript, Next.js</dd>
+          <dt>trained</dt>
+          <dd>PIAIC Agentic AI diploma, Generative AI Healthcare Specialist</dd>
+          <dt>result</dt>
+          <dd><b>+50%</b> client subscribers, <b>+25%</b> engagement, <b>80%+</b> satisfaction</dd>
+          <dt>next</dt>
+          <dd>Agentic AI Engineer role<span class="cursor" aria-hidden="true"></span></dd>
+        </dl>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="about">
+        <div class="section-head">
+          <p class="label">About</p>
+          <h2>Engineer who has also done the growth job</h2>
+        </div>
+        <div class="about-body">
+          <p>Most of my career has been spent on the business side of the screen: writing SEO copy, managing brands on social media, and building client websites with email marketing and custom checkout flows. I know what a client counts as a win, so I scope AI work around that number.</p>
+          <p>Since then I've moved into generative and agentic AI. I hold a Cloud Applied Generative AI Engineer certification from PIAIC, a Healthcare Specialist certification from FJDC AI, and I'm in the fifth quarter of PIAIC's Agentic AI Engineer diploma.</p>
+          <dl class="facts">
+            <div><dt>Based in</dt><dd>Karachi, GMT+5</dd></div>
+            <div><dt>Availability</dt><dd>Up to 6 hours a day</dd></div>
+            <div><dt>English</dt><dd>Native, IELTS 8.5</dd></div>
+            <div><dt>Also speaks</dt><dd>Urdu, Gujarati, French, Arabic</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <p class="label">Experience</p>
+        <h2>Where I've shipped results</h2>
+      </div>
+      <div class="ledger">
+        <article class="row">
+          <div class="when"><b>Oct 2023 to now</b>Freelance</div>
+          <div class="row-body">
+            <div><h3>Web Developer</h3></div>
+            <ul>
+              <li>Raised clients' subscriber counts by 50% by integrating email marketing software into their sites and building a customizable checkout.</li>
+              <li>Held a user satisfaction rating above 80% year over year with responsive technical support.</li>
+              <li>Builds with TypeScript, Next.js, Tailwind CSS, FastAPI and PostgreSQL.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="row">
+          <div class="when"><b>Mar 2020 to now</b>Freelance</div>
+          <div class="row-body">
+            <div><h3>Social Media Brand Manager</h3></div>
+            <ul>
+              <li>Designed and ran social media strategy that grew online engagement by 25% and website traffic by 15%.</li>
+              <li>Created brand identities, logos and campaign assets for clients in several industries.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="row">
+          <div class="when"><b>Mar 2019 to Dec 2023</b>Freelance</div>
+          <div class="row-body">
+            <div><h3>SEO Copywriter</h3></div>
+            <ul>
+              <li>Wrote advertising copy for online content that matched each employer's brand voice.</li>
+              <li>Worked SEO keywords into copy to lift search rankings and increase conversions.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="row">
+          <div class="when"><b>Jan 2024 to May 2025</b>Freelance</div>
+          <div class="row-body">
+            <div><h3>Academic Tutor</h3></div>
+            <ul>
+              <li>Taught 10+ students across Pakistan, the UAE and Malaysia in Biology, Chemistry, Math and English, moving grades from C and D to A and A*.</li>
+              <li>Built custom lesson plans and explained hard ideas clearly to people at different levels, a skill I use when documenting and handing over AI systems.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="section-head">
+        <p class="label">Work</p>
+        <h2>Client projects</h2>
+      </div>
+      <div class="work">
+        <article class="card">
+          <h3>Clinic brand identity</h3>
+          <p>A simple, approachable identity for a local clinic, built on a two-color scheme and modern shapes. It covers the logo, Instagram posts and stories, and an email header.</p>
+          <p class="tags">Brand identity / Social / Email</p>
+        </article>
+        <article class="card">
+          <h3>Client websites</h3>
+          <p>Personal and professional sites coded by hand in Tailwind CSS and TypeScript, with email marketing integration and a customizable checkout behind them.</p>
+          <p class="tags">TypeScript / Tailwind / Next.js</p>
+        </article>
+        <article class="card">
+          <h3>Brand redesign</h3>
+          <p>A visual refresh for a well-loved company whose business was changing direction. The new look matched where the company was heading.</p>
+          <p class="tags">Visual identity / Strategy</p>
+        </article>
+        <article class="card">
+          <h3>Logo design</h3>
+          <p>Distinct, memorable logos for clients in different industries, including restaurants and bars.</p>
+          <p class="tags">Logo / Identity</p>
+        </article>
+      </div>
+      <p class="more">Visuals for these projects are on my <a href="https://myportfoliowebite.my.canva.site/asmaamir" target="_blank" rel="noopener">design portfolio</a>.</p>
+    </section>
+
+    <section id="stack">
+      <div class="section-head">
+        <p class="label">Stack</p>
+        <h2>What I build with</h2>
+      </div>
+      <div class="stack">
+        <div class="group">
+          <h3>AI and backend</h3>
+          <ul class="chips"><li>Python</li><li>FastAPI</li><li>SQLModel</li><li>PostgreSQL</li><li>Data scraping</li></ul>
+        </div>
+        <div class="group">
+          <h3>Frontend</h3>
+          <ul class="chips"><li>TypeScript</li><li>JavaScript</li><li>Next.js</li><li>Tailwind CSS</li><li>HTML</li><li>CSS</li></ul>
+        </div>
+        <div class="group">
+          <h3>Growth</h3>
+          <ul class="chips"><li>SEO copywriting</li><li>Email marketing integration</li><li>Social media strategy</li><li>Brand identity</li></ul>
+        </div>
+        <div class="group">
+          <h3>Ways of working</h3>
+          <ul class="chips"><li>Team leadership</li><li>Problem solving</li><li>Microsoft 365 and Excel</li><li>Google Workspace</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning">
+      <div class="section-head">
+        <p class="label">Education and certificates</p>
+        <h2>Training</h2>
+      </div>
+      <div class="creds">
+        <div class="cred"><b>Agentic AI Engineer, Diploma</b><span>PIAIC, in progress (Quarter 5)</span></div>
+        <div class="cred"><b>Certified Cloud Applied Generative AI Engineer</b><span>PIAIC</span></div>
+        <div class="cred"><b>Certified Cloud Applied Generative AI Healthcare Specialist</b><span>FJDC AI</span></div>
+        <div class="cred"><b>Career Essentials in Generative AI</b><span>Microsoft and LinkedIn</span></div>
+        <div class="cred"><b>Introduction to Artificial Intelligence</b><span>Google Cloud Skill Boost</span></div>
+        <div class="cred"><b>Bachelor of Business Administration</b><span>FUUAST, in progress (Semester 4)</span></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <div class="contact-copy">
+          <p class="label">Contact</p>
+          <h2>Hiring for an agentic AI role?</h2>
+          <p>I'm looking for a team where I can build AI agents that serve a real customer. Send a note with the role and the problem and I'll reply with how I'd approach it.</p>
+        </div>
+        <div class="reach">
+          <div class="reach-row"><span class="k">Email</span><span class="v" id="v-email">asma.as.4211@gmail.com</span><button class="copy" type="button" data-target="v-email">Copy</button></div>
+          <div class="reach-row"><span class="k">Phone</span><span class="v" id="v-phone">+92 301 2884862</span><button class="copy" type="button" data-target="v-phone">Copy</button></div>
+          <div class="reach-row"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/asma-amir/" target="_blank" rel="noopener">linkedin.com/in/asma-amir</a><span></span></div>
+          <div class="reach-row"><span class="k">Design</span><a class="v" href="https://myportfoliowebite.my.canva.site/asmaamir" target="_blank" rel="noopener">Design portfolio on Canva</a><span></span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Asma Amir Safdari, Karachi, Pakistan</span>
+    <span>Agentic AI Engineer</span>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.getAttribute('data-target'));
+    var text = el.textContent.trim();
+    function done() {
+      var old = btn.textContent;
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = old; }, 1400);
+    }
+    function fallback() {
+      var r = document.createRange();
+      r.selectNodeContents(el);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+    }
+    try {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } catch (e) { fallback(); }
+  });
+});
+</script>
+
+</body></html>
